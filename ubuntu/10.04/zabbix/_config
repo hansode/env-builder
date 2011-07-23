@@ -1,0 +1,11 @@
+#!/bin/bash
+
+export LANG=C
+export LC_ALL=C
+
+
+deb_pkgs="
+ zabbix-server-mysql
+ zabbix-agent
+ zabbix-frontend-php
+"
