@@ -5,6 +5,7 @@ pkgs="
 
 for pkg in ${pkgs}; do
   pfexec pkg install ${pkg}
+  pkg contents ${pkg}
 done
 
 (cd ../ruby/ && make)
