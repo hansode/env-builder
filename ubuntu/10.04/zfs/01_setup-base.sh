@@ -22,3 +22,4 @@ sudo DEBIAN_FRONTEND=noninteractive apt-get -y install linux-headers-`uname -r`
 #sudo DEBIAN_FRONTEND=noninteractive apt-get -y install zfs-lib spl dkms
 #sudo DEBIAN_FRONTEND=noninteractive apt-get -y install spl-dkms
 sudo DEBIAN_FRONTEND=noninteractive apt-get -y install zfs
+sudo modprobe zfs
