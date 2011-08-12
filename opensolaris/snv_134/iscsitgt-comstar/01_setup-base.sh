@@ -19,9 +19,9 @@ echo "# before"
 svcs  | grep iscsi
 echo
 
-pfexec svcadm disable iscsitgt
-pfexec svcadm enable svc:/network/iscsi/target:default
-pfexec svcadm enable stmf
+pfexec svcadm disable svc:/system/iscsitgt:default
+pfexec svcadm enable  svc:/network/iscsi/target:default
+pfexec svcadm enable  svc:/system/stmf:default
 echo
 
 echo "# after"
