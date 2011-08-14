@@ -181,7 +181,8 @@ show|status)
     shlog pfexec stmfadm list-view -l ${guid}
   }
   shlog pfexec itadm list-target -v ${iqn}
-  shlog pfexec iscsiadm list target
+  #shlog pfexec iscsiadm list target
+  shlog pfexec iscsiadm list target -v ${iqn}
   show_iscsi_device
   ;;
 delete)
