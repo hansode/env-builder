@@ -1,7 +1,4 @@
-all: common deploy-manifest
-
-common:
-	./01_setup-base.sh
+all: deploy-manifest
 
 deploy-manifest:
 	find manifest -type f | sed s,^manifest/,, | while read line; do \
