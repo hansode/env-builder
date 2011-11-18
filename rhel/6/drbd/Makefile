@@ -7,7 +7,7 @@ setup:
 	./01_setup-base.sh
 
 build:
-	sudo ./02_build-rpm.sh
+	MAKELEVEL= fakeroot ./02_build-rpm.sh
 
 install:
-	sudo ./03_install-rpm.sh
+	./03_install-rpm.sh
