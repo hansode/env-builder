@@ -21,3 +21,5 @@ for local_rpm_pkg_path in ${local_rpm_pkg_paths}; do
     rpm -ivh ${local_rpm_pkg_path}
   }
 done
+
+[ -d /var/lib/lxc ] || mkdir /var/lib/lxc
