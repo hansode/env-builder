@@ -5,5 +5,5 @@ pkgs="
 "
 
 for pkg in ${pkgs}; do
-  rpm -ql ${pkgs} >/dev/null || yum install -y ${pkg}
+  rpm -ql ${pkgs} >/dev/null || sudo yum install -y ${pkg}
 done
