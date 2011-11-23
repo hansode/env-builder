@@ -2,7 +2,8 @@
 
 . ./_common.sh
 
-arch=$(arch)
+#arch=$(arch)
+arch=*86
 uname_r=$(uname -r | sed 's,-,_,g')
 rpmbuild_dir=${HOME}/rpmbuild
 
@@ -12,7 +13,7 @@ rpmbuild_dir=${HOME}/rpmbuild
 #/root/rpmbuild/RPMS/i686/lxc-debuginfo-0.7.5-1.i686.rpm
 
 local_rpm_pkg_paths="
-  ${rpmbuild_dir}/RPMS/${arch}/lxc-${lxc_version}-1.i686.rpm
+  ${rpmbuild_dir}/RPMS/${arch}/lxc-${lxc_version}-1.${arch}.rpm
 "
 
 for local_rpm_pkg_path in ${local_rpm_pkg_paths}; do
