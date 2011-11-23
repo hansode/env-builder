@@ -1,4 +1,4 @@
-all: install
+all: prepare
 
-install:
-	./01_setup-base.sh
+prepare:
+	./00_prepare-pkg.sh
