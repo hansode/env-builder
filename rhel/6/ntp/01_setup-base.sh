@@ -1,5 +1,5 @@
 #!/bin/sh
 
 chkconfig --list ntpd
-chkconfig ntpd on
+sudo chkconfig ntpd on
 chkconfig --list ntpd
