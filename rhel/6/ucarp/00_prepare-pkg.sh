@@ -5,14 +5,14 @@
 
 set -e
 
-rpm_pkgs="
+pkgs="
  ucarp
 "
 
 (cd ../epel-release && make)
 
-for rpm_pkg in ${rpm_pkgs}; do
-  rpm -ql ${rpm_pkg} >/dev/null || sudo yum install -y ${rpm_pkgs}
+for pkg in ${pkgs}; do
+  rpm -ql ${pkg} >/dev/null || sudo yum install -y ${pkgs}
 done
 
 exit 0
