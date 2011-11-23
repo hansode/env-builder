@@ -5,14 +5,14 @@
 
 set -e
 
-rpm_pkgs="
+pkgs="
  make
  git
  screen
 "
 
-for rpm_pkg in ${rpm_pkgs}; do
-  rpm -ql ${rpm_pkg} || sudo yum install -y ${rpm_pkg}
+for pkg in ${pkgs}; do
+  rpm -ql ${pkg} >/dev/null || sudo yum install -y ${pkg}
 done
 
 exit 0
