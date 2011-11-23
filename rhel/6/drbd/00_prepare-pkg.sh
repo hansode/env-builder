@@ -10,6 +10,7 @@ pkgs="
  rpm-build
  kernel-devel
  libxslt
+ fakeroot
 "
 
 for pkg in ${pkgs}; do
