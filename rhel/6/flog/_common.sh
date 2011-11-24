@@ -16,5 +16,5 @@ x86_64)
 esac
 
 local_rpm_pkg_paths="
- ./flog-${flog_rpm_version}.${arch}.rpm
+ ./flog-${flog_rpm_version}.*.rpm
 "
