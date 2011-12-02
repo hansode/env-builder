@@ -2,8 +2,11 @@
 
 . ./_common.sh
 
-#arch=$(arch)
-arch=*86
+arch=$(arch)
+case ${arch} in
+*86) arch=*86 ;;
+esac
+
 uname_r=$(uname -r | sed 's,-,_,g')
 rpmbuild_dir=${HOME}/rpmbuild
 
