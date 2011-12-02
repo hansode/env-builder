@@ -1,4 +1,4 @@
-alien_version=8.85
+alien_version=8.81
 
 rpmbuild_dir=${HOME}/rpmbuild
 
