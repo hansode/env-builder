@@ -12,6 +12,4 @@ find manifest -type f | sed s,^manifest/,, | while read line; do
   diff manifest/$line /$line || sudo cp manifest/$line /$line
 done
 
-sudo apt-get -y update
-
 exit 0
