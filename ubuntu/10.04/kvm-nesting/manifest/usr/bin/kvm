@@ -1,0 +1,2 @@
+#!/bin/bash
+exec /usr/bin/qemu-system-x86_64 -enable-nesting "$@"
