@@ -1,13 +1,8 @@
-all: install deploy-manifest setup-repo
+all: prepare setup
 
-install:
+prepare:
+	./00_prepare-pkg.sh
+
+setup:
 	./01_setup-base.sh
-
-setup-repo:
 	./02_setup-repo.sh
-
-deploy-manifest:
-	find manifest -type f | sed s,^manifest/,, | while read line; do \
-	  echo ... $$line; \
-	  sudo cp manifest/$$line /$$line; \
-	done

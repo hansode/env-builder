@@ -9,12 +9,6 @@ set -e
 
 cd /etc
 sudo etckeeper init
-
-#sudo git rm --cached -r -f ./
-#
-#sudo git add -f .etckeeper
-#sudo git add -f .gitignore
-#sudo git add -A
 sudo etckeeper commit "Init repo."
 
 exit 0
