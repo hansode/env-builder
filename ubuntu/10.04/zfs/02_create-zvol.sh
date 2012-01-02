@@ -1,7 +1,8 @@
 #!/bin/sh -e
 
 vol_size=64
-raw_file=/var/tmp/zfs/${vol_size}mb-0.raw
+raw_dir=/var/tmp/zfs
+raw_file=${raw_dir}/${vol_size}mb-0.raw
 zpool_name=xpool
 zvol_size=1g
 zvol_name=${zvol_size}-sparse
@@ -9,6 +10,10 @@ zvol_path=${zpool_name}/${zvol_name}
 
 sudo zfs list
 echo
+
+[ -d ${raw_dir} ] || {
+  mkdir ${raw_dir}
+}
 
 [ -f ${raw_file} ] || {
   dd if=/dev/zero of=${raw_file} bs=1M count=${vol_size}
