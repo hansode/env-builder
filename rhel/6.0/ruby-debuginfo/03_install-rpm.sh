@@ -14,6 +14,9 @@ local_rpm_pkg_paths="
  ${rpmbuild_dir}/RPMS/${arch}/ruby-libs-${ruby_version}.el6.${arch}.rpm
  ${rpmbuild_dir}/RPMS/${arch}/ruby-rdoc-${ruby_version}.el6.${arch}.rpm
  ${rpmbuild_dir}/RPMS/${arch}/ruby-ri-${ruby_version}.el6.${arch}.rpm
+
+ ${rpmbuild_dir}/RPMS/${arch}/ruby-static-${ruby_version}.el6.${arch}.rpm
+ ${rpmbuild_dir}/RPMS/${arch}/ruby-tcltk-${ruby_version}.el6.${arch}.rpm
 "
 
 #for local_rpm_pkg_path in ${local_rpm_pkg_paths}; do
