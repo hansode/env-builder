@@ -10,4 +10,4 @@ local_rpm_pkg_paths="
    ${rpmbuild_dir}/RPMS/${arch}/ruby-${ruby_version}-1.${arch}.rpm
 "
 
-sudo rpm -Uvh -Uvh --nomd5 ${local_rpm_pkg_paths}
+sudo rpm -Uvh --nomd5 ${local_rpm_pkg_paths}
