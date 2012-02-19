@@ -1,3 +1,5 @@
 #!/bin/bash
 
-easy_install sphinx
+[ -x /usr/bin/sphinx-quickstart ] || {
+  easy_install sphinx
+}
