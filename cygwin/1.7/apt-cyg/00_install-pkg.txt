@@ -1,0 +1,4 @@
+* depends on
+- wget
+- gzip2
+- gawk
