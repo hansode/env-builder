@@ -7,6 +7,9 @@ pkgs="
  screen
  lv
  rsync
+
+ vim
+ emacs
 "
 
 for pkg in ${pkgs}; do
