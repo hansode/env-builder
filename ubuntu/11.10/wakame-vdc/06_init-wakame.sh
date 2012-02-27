@@ -19,6 +19,12 @@ EOS
 
 cat <<'EOS' | su - wakame
 cd /home/wakame/wakame-vdc/dcmgr
+
+# fix tilt-1.3.3 spec
+for gemspec in /home/wakame/wakame-vdc/dcmgr/.vendor/bundle/ruby/1.8/specifications/tilt-*.gemspec; do
+  perl -pi -e 's,s.date = %q{2011-08-25 00:00:00.000000000Z},s.date = %q{2011-08-25},' ${gemspec}
+done
+
 bundle exec rake db:init
 
 cd /home/wakame/wakame-vdc/frontend/dcmgr_gui
@@ -48,12 +54,13 @@ done
 # hva.conf
 perl -pi -e 's,^config.vm_data_dir.*,config.vm_data_dir = "/home/wakame/wakame-vdc/tmp/instances",' /home/wakame/wakame-vdc/dcmgr/config/hva.conf
 perl -pi -e 's,^config.edge_networking.*,config.edge_networking = "legacy_netfilter",' /home/wakame/wakame-vdc/dcmgr/config/hva.conf
-#perl -pi -e 's,^config.enable_ebtables.*,config.enable_ebtables = false,' /home/wakame/wakame-vdc/dcmgr/config/hva.conf
+perl -pi -e 's,^config.enable_ebtables.*,config.enable_ebtables = false,' /home/wakame/wakame-vdc/dcmgr/config/hva.conf
 
 
 # metadata drive's mount point
 #perl -pi -e 's,rootfs/metadata,rootfs/mnt/metadata,g' /home/wakame/wakame-vdc/dcmgr/lib/dcmgr/drivers/lxc.rb
 perl -pi -e 's,3<&-[^"]+,3<&- 4<&- 5<&- 6<&- 7<&- 8<&- 9<&-,' /home/wakame/wakame-vdc/dcmgr/lib/dcmgr/drivers/lxc.rb
+perl -pi -e 's, /cgroup, /sys/fs/cgroup/devices,' /home/wakame/wakame-vdc/dcmgr/lib/dcmgr/drivers/lxc.rb
 
 
 
