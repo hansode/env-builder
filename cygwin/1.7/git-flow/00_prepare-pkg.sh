@@ -1,6 +1,7 @@
 #!/bin/bash
 
 pkgs="
+ util-linux
 "
 
 for pkg in ${pkgs}; do
