@@ -10,6 +10,9 @@ pkgs="
 
  vim
  emacs
+
+ gcc-core
+ gcc-g++
 "
 
 for pkg in ${pkgs}; do
