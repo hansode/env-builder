@@ -5,6 +5,7 @@ pkgs="
   curl
   netcat
   inetutils
+  bind
 "
 
 for pkg in ${pkgs}; do
