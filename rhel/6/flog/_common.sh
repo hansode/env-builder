@@ -1,6 +1,6 @@
 flog_version=1.8
 flog_deb_version=${flog_version}-3
-flog_rpm_version=${flog_version}-4
+flog_rpm_version=${flog_version}-3
 
 
 rpmbuild_dir=${HOME}/rpmbuild
