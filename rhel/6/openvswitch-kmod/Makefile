@@ -3,12 +3,11 @@ all: prepare setup build install
 prepare:
 	./00_prepare-pkg.sh
 
-setup:
+setup: prepare
 	./01_setup-base.sh
 
-build:
-	#MAKELEVEL= fakeroot ./02_build-rpm.sh
+build: setup
 	./02_build-rpm.sh
 
-install:
+install: build
 	./03_install-rpm.sh
