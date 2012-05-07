@@ -8,4 +8,5 @@ rsync -a ./openvswitch-${openvswitch_version}.tar.gz $HOME/rpmbuild/SOURCES/
 
 cd openvswitch-${openvswitch_version}
 
+rpmbuild -bb rhel/openvswitch.spec
 rpmbuild -bb rhel/openvswitch-kmod-rhel6.spec
