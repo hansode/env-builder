@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -e
+
 . ./_common.sh
 
 arch=$(arch)
