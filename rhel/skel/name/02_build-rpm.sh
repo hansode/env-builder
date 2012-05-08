@@ -7,6 +7,9 @@ set -e
 #[ -d name-${name_version} ] || exit 1
 
 #cd name-${name_version}
-#make rpm
-#make km-rpm
+#(
+#for local_rpm_pkg_path in ${local_rpm_pkg_paths}; do
+#  [ -f ${local_rpm_pkg_path} ] || exit 1
+#done
+#) || make rpm
 
