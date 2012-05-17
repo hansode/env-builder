@@ -6,8 +6,14 @@ prepare:
 setup: prepare
 	./01_setup-base.sh
 
-build: setup
-	./02_build-rpm.sh
+build: setup build-stamp
 
-install: build
+build-stamp:
+	#MAKELEVEL= fakeroot ./02_build-rpm.sh
+	./02_build-rpm.sh
+	touch $@
+
+install:
 	./03_install-rpm.sh
+
+.PHONY: all prepare setup build install
