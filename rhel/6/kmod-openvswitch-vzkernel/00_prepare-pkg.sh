@@ -10,3 +10,4 @@ for pkg in ${pkgs}; do
 done
 
 (cd ../rpmbuild/ && make)
+(cd ../openvz/ && make)
