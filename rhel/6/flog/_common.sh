@@ -5,7 +5,7 @@ flog_rpm_version=${flog_version}-3
 
 rpmbuild_dir=${HOME}/rpmbuild
 
-arch=$(arch)
+arch=${arch:-$(arch)}
 case ${arch} in
 x86_64)
   arch=amd64
