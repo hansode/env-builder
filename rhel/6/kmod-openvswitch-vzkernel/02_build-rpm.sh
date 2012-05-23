@@ -14,4 +14,4 @@ set -e
 #) || make rpm
 
 
-rpmbuild -bb ./kmod-openvswitch-vzkernel.spec
+rpmbuild -bb --target=${arch} ./kmod-openvswitch-vzkernel.spec
