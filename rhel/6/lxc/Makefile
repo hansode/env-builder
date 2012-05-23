@@ -4,12 +4,12 @@ prepare:
 	./00_prepare-pkg.sh
 
 setup: prepare
-	./01_setup-base.sh
+	arch=$(BUILD_ARCH) ./01_setup-base.sh
 
 build: setup
 	#MAKELEVEL= fakeroot ./02_build-rpm.sh
 	# cannot use fakeroot to build rpm.
-	sudo ./02_build-rpm.sh
+	sudo arch=$(BUILD_ARCH) ./02_build-rpm.sh
 
 install:
-	sudo ./03_install-rpm.sh
+	sudo arch=$(BUILD_ARCH) ./03_install-rpm.sh
