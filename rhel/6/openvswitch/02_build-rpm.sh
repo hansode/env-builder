@@ -17,6 +17,6 @@ for local_rpm_pkg_path in ${local_rpm_pkg_paths}; do
   [ -f ${local_rpm_pkg_path} ] || exit 1
 done
 ) || (
- rpmbuild -bb rhel/openvswitch.spec
- rpmbuild -bb rhel/openvswitch-kmod-rhel6.spec
+ rpmbuild -bb --target=${arch} rhel/openvswitch.spec
+ rpmbuild -bb --target=${arch} rhel/openvswitch-kmod-rhel6.spec
 )
