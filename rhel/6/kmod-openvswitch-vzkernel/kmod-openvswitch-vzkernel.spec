@@ -1,4 +1,4 @@
-%define tmp_file "/tmp/rpm.kmod-kpkg.tmp"
+%define tmp_file "/tmp/rpm.kmod-kpkg.%(whoami).tmp"
 %define kpkg_name vzkernel
 %define kpkg_devel_name %{kpkg_name}-devel
 %define kernel_version %(rpm -qi %{kpkg_devel_name} | egrep ^Version > %{tmp_file} && awk '{print $3}' %{tmp_file} | sort -r | head -1)
@@ -11,6 +11,7 @@
 %define kernelversion %{kernel_lib_version}
 
 %define oname openvswitch
+%define oname_base_uri http://openvswitch.org/releases
 
 Name: kmod-%{oname}-%{kpkg_name}
 Version: 1.4.1
@@ -19,7 +20,7 @@ Summary: Open vSwitch kernel module
 Group: System/Kernel
 License: GPLv2
 URL: http://openvswitch.org/
-Source:  http://openvswitch.org/releases/%{oname}-%{version}.tar.gz
+Source:  %{oname_base_uri}/%{oname}-%{version}.tar.gz
 Requires: module-init-tools
 Requires: vzkernel
 
@@ -27,6 +28,9 @@ Requires: vzkernel
 Open vSwitch Linux kernel module.
 
 %prep
+[ -f ${RPM_SOURCE_DIR}/%{oname}-%{version}.tar.gz ] || {
+  curl -o ${RPM_SOURCE_DIR}/%{oname}-%{version}.tar.gz -O %{oname_base_uri}/%{oname}-%{version}.tar.gz
+}
 [ -d %{name}-%{version} ] || {
   tar zxvf ${RPM_SOURCE_DIR}/%{oname}-%{version}.tar.gz -C ${RPM_BUILD_DIR}/
   mv %{oname}-%{version} %{name}-%{version}
