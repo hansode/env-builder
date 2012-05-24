@@ -3,7 +3,7 @@ openvswitch_version=1.4.1
 arch=${arch:-$(arch)}
 case ${arch} in
 x86_64)
-  arch=amd64
+  arch=x86_64
   ;;
 *)
   arch=i386
