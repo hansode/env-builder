@@ -16,4 +16,7 @@ build-stamp:
 install:
 	arch=$(BUILD_ARCH) ./03_install-rpm.sh
 
-.PHONY: all prepare setup build install
+clean:
+	rm build-stamp
+
+.PHONY: all prepare setup build install clean
