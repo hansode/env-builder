@@ -2,12 +2,8 @@ lxc_version=0.7.5
 
 arch=${arch:-$(arch)}
 case ${arch} in
-x86_64)
-  arch=amd64
-  ;;
-*)
-  arch=i386
-  ;;
+i*86)   basearch=i386; arch=i686;;
+x86_64) basearch=${arch};;
 esac
 
 #uname_r=$(uname -r | sed 's,-,_,g')
