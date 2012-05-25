@@ -16,4 +16,7 @@ build-stamp:
 install:
 	./03_install-rpm.sh
 
+clean:
+	- rm build-stamp
+
 .PHONY: all prepare setup build install
