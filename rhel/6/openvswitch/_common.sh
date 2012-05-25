@@ -10,6 +10,6 @@ esac
 rpmbuild_dir=${HOME}/rpmbuild
 
 local_rpm_pkg_paths="
-  ${rpmbuild_dir}/RPMS/${basearch}/openvswitch-${openvswitch_version}-1.${basearch}.rpm
-  ${rpmbuild_dir}/RPMS/${basearch}/kmod-openvswitch-${openvswitch_version}-1.el6.${basearch}.rpm
+  ${rpmbuild_dir}/RPMS/${arch}/openvswitch-${openvswitch_version}-1.${arch}.rpm
+  ${rpmbuild_dir}/RPMS/${arch}/kmod-openvswitch-${openvswitch_version}-1.el6.${arch}.rpm
 "
