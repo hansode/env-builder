@@ -12,7 +12,7 @@ pkgs="
 (cd ../epel-release && make)
 
 for pkg in ${pkgs}; do
-  rpm -ql ${pkg} >/dev/null || sudo yum install -y ${pkgs}
+  rpm -ql ${pkg} >/dev/null || yum install -y ${pkgs}
 done
 
 exit 0

@@ -9,7 +9,7 @@ setup: prepare
 build: setup
 	#MAKELEVEL= fakeroot ./02_build-rpm.sh
 	# cannot use fakeroot to build rpm.
-	sudo arch=$(BUILD_ARCH) ./02_build-rpm.sh
+	arch=$(BUILD_ARCH) ./02_build-rpm.sh
 
 install:
-	sudo arch=$(BUILD_ARCH) ./03_install-rpm.sh
+	arch=$(BUILD_ARCH) ./03_install-rpm.sh

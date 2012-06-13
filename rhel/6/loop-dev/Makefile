@@ -1,4 +1,4 @@
 all: setup
 
 setup:
-	sudo ./01_setup-base.sh
+	./01_setup-base.sh

@@ -6,9 +6,9 @@
 set -e
 
 chkconfig --list rpcbind
-sudo chkconfig rpcbind on
+chkconfig rpcbind on
 chkconfig --list rpcbind
 
-service rpcbind status || sudo service rpcbind start
+service rpcbind status || service rpcbind start
 
 exit 0

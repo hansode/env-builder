@@ -14,4 +14,4 @@ set -e
 #) || make rpm
 
 [ -f /etc/yum.repos.d/openvz.repo ] || \
-  sudo rsync -a openvz.repo /etc/yum.repos.d/openvz.repo
+  rsync -a openvz.repo /etc/yum.repos.d/openvz.repo
