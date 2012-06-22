@@ -1,4 +1,4 @@
-openvswitch_version=1.4.1
+openvswitch_version=1.5.0
 
 arch=${arch:-$(arch)}
 case ${arch} in
