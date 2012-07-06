@@ -14,7 +14,7 @@
 %define oname_base_uri http://openvswitch.org/releases
 
 Name: kmod-%{oname}-%{kpkg_name}
-Version: 1.5.0
+Version: 1.6.1
 Release: 1%{?dist}
 Summary: Open vSwitch kernel module
 Group: System/Kernel
