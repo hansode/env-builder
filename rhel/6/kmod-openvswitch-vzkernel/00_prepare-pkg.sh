@@ -4,6 +4,7 @@ set -e
 
 (cd ../rpmbuild/ && make)
 (cd ../openvz/ && make)
+(cd ../openvswitch/ && make build)
 
 pkgs="
   vzkernel-devel
