@@ -1,4 +1,4 @@
-lxc_version=0.7.5
+lxc_version=0.8.0
 
 arch=${arch:-$(arch)}
 case ${arch} in
@@ -14,5 +14,6 @@ rpmbuild_dir=${HOME}/rpmbuild
 #/root/rpmbuild/RPMS/i686/lxc-debuginfo-0.7.5-1.i686.rpm
 
 local_rpm_pkg_paths="
-  ${rpmbuild_dir}/RPMS/${arch}/lxc-${lxc_version}-1.${arch}.rpm
+  ${rpmbuild_dir}/RPMS/${arch}/lxc-libs-${lxc_version}-1.*.${arch}.rpm
+  ${rpmbuild_dir}/RPMS/${arch}/lxc-${lxc_version}-1.*.${arch}.rpm
 "

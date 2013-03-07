@@ -9,4 +9,4 @@ set -e
 [ -d lxc-${lxc_version} ] || tar zxvf lxc-${lxc_version}.tar.gz
 cd lxc-${lxc_version}
 
-[ -f Makefile ] || ./configure
+[ -f Makefile ] || ./configure --disable-apparmor
