@@ -2,10 +2,11 @@
 
 . ./_common.sh
 
-[ -f s3cmd-${s3cmd_ver}.zip ] || {
-  wget -O s3cmd-${s3cmd_ver}.zip "http://sourceforge.net/projects/s3tools/files/latest/download?source=files"
-  mv -i "download@source=files" s3cmd-${s3cmd_ver}.tar.gz
-  unzip s3cmd-${s3cmd_ver}.zip
+s3cmd_tarball=s3cmd-${s3cmd_ver}.tar.gz
+
+[ -f ${s3cmd_tarball} ] || {
+  wget -O ${s3cmd_tarball} "http://sourceforge.net/projects/s3tools/files/latest/download?source=files"
+  tar zxvf ${s3cmd_tarball}
 }
 
 extracted_dir=$(for i in s3cmd-*; do [ -d $i ] && echo $i; done | sort -r | head -1)
