@@ -25,6 +25,13 @@ Tye the following commands on cmd.exe window.
     $ cd C:\cygwin\usr\bin
     $ dash rebaseall -v
 
+## [unable to run any cygwin commands: error while loading shared libraries: C](https://www.marshut.net/imtvrm/unable-to-run-any-cygwin-commands-error-while-loading-shared-libraries-c.html)
+
+1. run `cygcheck -srv`
+2. check the trouble package(s)
+3. run 'setup*.exe'
+4. reinstall the trouble package(s)
+
 # Links
 
 + [Cygwin Package List](http://cygwin.com/packages/)
